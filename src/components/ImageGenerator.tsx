@@ -81,7 +81,7 @@ export function ImageGenerator() {
               </label>
               <Input
                 id="apiKey"
-                type="text"
+                type="password"
                 placeholder="Your API Key"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
