@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 
+// Define the page transition variants and transition configuration
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -21,7 +22,12 @@ const pageTransition = {
   duration: 0.5,
 }
 
-export function PageTransition({ children }) {
+// Define the type for the props of the PageTransition component
+interface PageTransitionProps {
+  children: React.ReactNode; // children can be any valid React content
+}
+
+export function PageTransition({ children }: PageTransitionProps) {
   return (
     <motion.div
       initial="initial"
@@ -34,4 +40,3 @@ export function PageTransition({ children }) {
     </motion.div>
   )
 }
-

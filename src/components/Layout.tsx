@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 
-export function Layout({ children }) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <header className="border-b border-gray-700">
@@ -32,3 +36,4 @@ export function Layout({ children }) {
   )
 }
 
+export default Layout;

@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 
+// Define the type for FeatureCard props
+interface FeatureCardProps {
+  title: string;
+  description: string;
+}
+
 export function LandingPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-140px)] text-center">
@@ -34,7 +40,8 @@ export function LandingPage() {
   )
 }
 
-function FeatureCard({ title, description }) {
+// Explicitly type the props for FeatureCard
+function FeatureCard({ title, description }: FeatureCardProps) {
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
       <h3 className="text-xl font-semibold mb-2 text-purple-400">{title}</h3>
@@ -42,4 +49,3 @@ function FeatureCard({ title, description }) {
     </div>
   )
 }
-
